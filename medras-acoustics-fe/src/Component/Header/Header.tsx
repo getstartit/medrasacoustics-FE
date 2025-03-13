@@ -30,7 +30,7 @@ export const Header = () => {
       <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
         <div className="navbar-left">
           <div className="logo-container" onClick={() => navigate("/")}> 
-            <img src={`${process.env.PUBLIC_URL}/image/l_t-nobg.png`} alt="logo" />
+            {/* <img src={`${process.env.PUBLIC_URL}/image/l_t-nobg.png`} alt="logo" /> */}
             <div className="logo-text-wrapper">
               <span className="logo-text">Medras Acoustics</span>
             </div>

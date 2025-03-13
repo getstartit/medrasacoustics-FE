@@ -1,50 +1,57 @@
 export const Footer = () => {
-    return (
-      <footer className="footer">
+  return (
+    <footer className="footer">
+      {/* Top Section - Logo & Navigation */}
+      <div className="footer-top">
         {/* Left - Logo & Name */}
         <div className="footer-left">
-          <img src={`${process.env.PUBLIC_URL}/image/l_t-nobg.png`} alt="Logo" className="footer-logo" />
+          {/* <img
+            src={`${process.env.PUBLIC_URL}/image/l_t-nobg.png`}
+            alt="Medras Acoustics Logo"
+            className="footer-logo"
+          /> */}
           <span className="footer-company-name">Medras Acoustics</span>
         </div>
-  
+
         {/* Center - Navigation Links */}
-        <ul className="footer-nav">
-          {[
-            { path: "/", label: "Home" },
-            { path: "/acoustics", label: "Acoustics" },
-            { path: "/services", label: "Services" },
-            { path: "/software", label: "Software" },
-            { path: "/team", label: "Team" },
-            { path: "/contact-us", label: "Contact Us" },
-          ].map(({ path, label }) => (
-            <li key={path}>
-              <a href={path}>{label}</a>
-            </li>
-          ))}
-        </ul>
-  
-        {/* Right - Social Media Links */}
-        <div className="footer-social">
-          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-facebook-f"></i>
+        <nav aria-label="Footer Navigation">
+          <ul className="footer-nav">
+            {[
+              { path: "/", label: "Home" },
+              { path: "/acoustics", label: "Acoustics" },
+              { path: "/services", label: "Services" },
+              { path: "/software", label: "Software" },
+              { path: "/team", label: "Team" },
+              { path: "/contact-us", label: "Contact Us" },
+            ].map(({ path, label }) => (
+              <li key={path}>
+                <a href={path}>{label}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+
+      {/* Social Media Links - Centered on a New Line */}
+      <div className="footer-social">
+        {[
+          { href: "https://facebook.com", icon: "fab fa-facebook-f", label: "Facebook" },
+          { href: "https://instagram.com", icon: "fab fa-instagram", label: "Instagram" },
+          { href: "https://twitter.com", icon: "fab fa-twitter", label: "Twitter" },
+          { href: "https://wa.me/1234567890", icon: "fab fa-whatsapp", label: "WhatsApp" },
+          { href: "tel:+1234567890", icon: "fas fa-phone", label: "Phone" },
+          { href: "https://goo.gl/maps/example", icon: "fas fa-map-marker-alt", label: "Location" },
+        ].map(({ href, icon, label }) => (
+          <a key={href} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
+            <i className={icon}></i>
           </a>
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-instagram"></i>
-          </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-twitter"></i>
-          </a>
-          <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-whatsapp"></i>
-          </a>
-          <a href="tel:+1234567890">
-            <i className="fas fa-phone"></i>
-          </a>
-          <a href="https://goo.gl/maps/example" target="_blank" rel="noopener noreferrer">
-            <i className="fas fa-map-marker-alt"></i>
-          </a>
-        </div>
-      </footer>
-    );
-  };
-  
+        ))}
+      </div>
+
+      {/* Copyright */}
+      <div className="footer-copyright">
+        &copy; {new Date().getFullYear()} Medras Acoustics. All rights reserved.
+      </div>
+    </footer>
+  );
+};
