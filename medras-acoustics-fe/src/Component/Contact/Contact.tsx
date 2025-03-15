@@ -32,7 +32,7 @@ export const Contact = () => {
     <div className="contact-page">
 
       <div className="hero-section">
-        <img src={`${process.env.PUBLIC_URL}/image/contact-bg.jpg`} alt="Contact" className="hero-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/contact.jpg`} alt="Contact" className="hero-image" />
         <div className="hero-content">
           <h1>Get in Touch</h1>
           <p>We’d love to hear from you! Reach out with any queries or concerns.</p>
