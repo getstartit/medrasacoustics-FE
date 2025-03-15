@@ -19,7 +19,6 @@ export const Footer = () => {
             {[
               { path: "/", label: "Home" },
               { path: "/acoustics", label: "Acoustics" },
-              { path: "/services", label: "Services" },
               { path: "/software", label: "Software" },
               { path: "/team", label: "Team" },
               { path: "/contact-us", label: "Contact Us" },
@@ -30,6 +29,8 @@ export const Footer = () => {
             ))}
           </ul>
         </nav>
+
+        
       </div>
 
       {/* Social Media Links - Centered on a New Line */}

@@ -36,9 +36,7 @@ body {
 
 .navbar.scrolled {
   background: rgba(255, 255, 255, 0.1);
-  /* Light transparent background */
   backdrop-filter: blur(15px);
-  /* Frosted glass effect */
   -webkit-backdrop-filter: blur(15px);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 
@@ -186,7 +184,9 @@ body {
   padding: 8px 12px;
   color: #17575f;
 }
-
+.navbar.scrolled .dropdown .dropdown-menu li a {
+  color: white !important;
+}
 .dropdown-menu li:hover {
   background-color: #d2dbdc;
   color: white;
@@ -1171,106 +1171,98 @@ section h2 {
   font-size: 16px;
   color: #555;
 }
-  
-
+.home-container {
+  margin: 40px auto;
+  padding: 0 30px;
+}
 .home-section {
   position: relative;
   width: 100%;
   height: 100vh;
+  background: url('/images/acoustic-1.jpeg') no-repeat center center/cover;
 }
-
-/* CSS */
-.home-section {
-  position: relative;
-  width: 100%;
-  height: 60vh;
-  overflow: hidden;
-}
-
-.home-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(0.7);
-}
-
-.home-content {
+/* Hero Overlay */
+.home-overlay {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-}
-
-.home-content h1 {
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-
-.home-content p {
-  font-size: 1.2rem;
-}
-
-.home-about {
+  inset: 0;
   display: flex;
   align-items: center;
-  padding: 60px 10%;
-  background: #fff;
-}
-
-.home-about-image img {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 10px;
-}
-
-.home-about-text {
-  flex: 1;
-  padding-left: 40px;
-}
-
-.home-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  padding: 40px 10%;
-}
-
-.home-card {
-  position: relative;
-  width: 100%;
-  height: 250px;
-  border-radius: 10px;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.home-card-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.3s;
-}
-
-.home-card-overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
+  justify-content: center;
   background: rgba(0, 0, 0, 0.5);
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
 }
 
-@media (max-width: 1024px) {
-  .home-grid {
-      grid-template-columns: repeat(2, 1fr);
-  }
+/* Section Titles */
+.home-section-title,
+.home-software-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #17575f;
 }
 
-@media (max-width: 768px) {
-  .home-grid {
-      grid-template-columns: 1fr;
-  }
+/* Grid Layout */
+.home-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 60px;
+  justify-content: center;
+}
+
+/* Cards */
+.home-card {
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.home-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Card Overlay with Glassmorphism */
+.home-card-overlay {
+  position: absolute;
+  top: 90%; /* Adjusted to lower the overlay */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Reduce width for better aesthetics */
+  height: 60px; /* Minimized height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #17575f;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.15); /* Subtle glass effect */
+  border-radius: 8px;
+}
+
+/* Hover Effect */
+.home-card:hover .home-card-overlay {
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(15px);
+  color: #160f29;
+}
+
+
+/* Hover Effects */
+.home-card:hover img {
+  transform: scale(1.1);
+}
+
+
+/* Services Section */
+.home-services-section {
+  margin-top: 10%;
 }

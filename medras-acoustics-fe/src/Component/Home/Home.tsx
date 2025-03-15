@@ -1,76 +1,72 @@
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import React from "react";
 
+const softwareSections = [
+    { title: "AFMG", image: "/images/acoustic-1.jpeg" },
+    { title: "SOUND FLOW", image: "/images/acoustic-1.jpeg" },
+    { title: "REFLEX", image: "/images/acoustic-1.jpeg" },
+    { title: "INSUL", image: "/images/acoustic-1.jpeg" },
+    { title: "SYSTUNE", image: "/images/acoustic-1.jpeg" },
+];
+
+const serviceSections = [
+    { title: "Music Studios", image: "/images/acoustic-1.jpeg", path: "/professional" },
+    { title: "Film Mix Stages", image: "/images/acoustic-1.jpeg", path: "/professional" },
+    { title: "Home Cinemas", image: "/images/acoustic-1.jpeg", path: "/residential" },
+    { title: "Home Entertainment", image: "/images/acoustic-1.jpeg", path: "/residential" },
+];
 export const Home = () => {
-    const navigate = useNavigate();
-    const [popupContent, setPopupContent] = useState(null);
-
-    const softwareSections = [
-        { title: "AFMG", image: "/images/acoustic-1.jpeg" },
-        { title: "SOUND FLOW", image: "/images/acoustic-1.jpeg" },
-        { title: "REFLEX", image: "/images/acoustic-1.jpeg" },
-        { title: "INSUL", image: "/images/acoustic-1.jpeg" },
-        { title: "SYSTUNE", image: "/images/acoustic-1.jpeg" },
-    ];
-
-    const serviceSections = [
-        { title: "Music Studios", image: "/images/acoustic-1.jpeg", path: "/professional" },
-        { title: "Film Mix Stages", image: "/images/acoustic-1.jpeg", path: "/professional" },
-        { title: "Home Cinemas", image: "/images/acoustic-1.jpeg", path: "/residential" },
-        { title: "Home Entertainment", image: "/images/acoustic-1.jpeg", path: "/residential" }
-    ];
-
     return (
         <>
-            {/* Hero Section */}
-            <div className="home-section">
-                <img src="/images/contact.jpg" alt="Contact" className="home-image" />
-                <div className="home-content">
-                    <h1>Get in Touch</h1>
-                    <p>We’d love to hear from you! Reach out with any queries or concerns.</p>
+         {/* Hero Section */}
+         <div className="home-section">
+                <div className="home-overlay">
+                    <h1>Madras Acoustics - Experts in Soundproofing</h1>
                 </div>
             </div>
 
-            {/* About Us Section */}
-            <section className="home-about">
-                <div className="home-about-image">
+
+        <div className="home-container  mt-10 px-6 md:px-20">
+
+            <div className="about-section">
+                <div className="about-image">
                     <img src="/images/acoustic-1.jpeg" alt="About Us" />
                 </div>
-                <div className="home-about-text">
+                <div className="about-text">
                     <h2>ABOUT US</h2>
-                    <p>We are a passionate team dedicated to delivering high-quality services.</p>
+                    <p>
+                        We are a passionate team dedicated to delivering high-quality services.
+                        Our goal is to innovate and inspire through technology.
+                    </p>
                 </div>
-            </section>
+            </div>
 
-            {/* Software Section */}
-            <section className="home-software">
-                <h2>SOFTWARE</h2>
-                <div className="home-grid">
-                    {softwareSections.map((section, index) => (
-                        <div key={index} className="home-card" onClick={() => navigate("/software")}> 
-                            <img src={section.image} alt={section.title} className="home-card-image" />
-                            <div className="home-card-overlay">
-                                <h3>{section.title}</h3>
-                            </div>
+            <div className="home-software-section">
+                <h2 className="home-software-title">Software</h2>
+                <div className="home-grid-container">
+                    {softwareSections.map((service, index) => (
+                        <div key={index} className="home-card">
+                            <img src={service.image} alt={service.title} />
+                            <div className="home-card-overlay">{service.title}</div>
                         </div>
                     ))}
                 </div>
-            </section>
+            </div>
 
             {/* Services Section */}
-            <section className="home-service-section">
-                <h2>SERVICES</h2>
-                <div className="home-grid">
+            <div className="home-services-section">
+                <h2 className="home-section-title">Services</h2>
+                <div className="home-grid-container">
                     {serviceSections.map((service, index) => (
-                        <div key={index} className="home-card" onClick={() => navigate(service.path)}>
-                            <img src={service.image} alt={service.title} className="home-card-image" />
-                            <div className="home-card-overlay">
-                                <h3>{service.title}</h3>
-                            </div>
+                        <div key={index} className="home-card">
+                            <img src={service.image} alt={service.title} />
+                            <div className="home-card-overlay">{service.title}</div>
                         </div>
                     ))}
                 </div>
-            </section>
+            </div>
+        </div>
         </>
     );
 };
+
+
