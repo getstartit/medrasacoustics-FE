@@ -23,6 +23,14 @@ const sections = [
 
 export const Acoustics: React.FC = () => {
   return (
+    <>
+      <div className="hero-section">
+        <img src={`${process.env.PUBLIC_URL}/images/contact.jpg`} alt="Contact" className="hero-image" />
+        <div className="hero-content">
+          <h1>Get in Touch</h1>
+          <p>We’d love to hear from you! Reach out with any queries or concerns.</p>
+        </div>
+      </div>
     <div className="acoustics-container">
       {sections.map((section, index) => (
         <div key={index} className={`acoustic-section ${section.imageLeft ? "left" : "right"}`}>
@@ -37,5 +45,6 @@ export const Acoustics: React.FC = () => {
         </div>
       ))}
     </div>
+    </>
   );
 };

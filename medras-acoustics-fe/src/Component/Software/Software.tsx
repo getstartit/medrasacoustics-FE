@@ -35,7 +35,17 @@ const softwareSections = [
 
 export const Software: React.FC = () => {
   return (
+    <>
+    
+    <div className="hero-section">
+        <img src={`${process.env.PUBLIC_URL}/images/contact.jpg`} alt="Contact" className="hero-image" />
+        <div className="hero-content">
+          <h1>Get in Touch</h1>
+          <p>We’d love to hear from you! Reach out with any queries or concerns.</p>
+        </div>
+      </div>
     <div className="software-container">
+
       {softwareSections.map((section, index) => (
         <div key={index} className={`software-section ${section.imageLeft ? "left" : "right"}`}>
           <div className="software-image">
@@ -49,6 +59,7 @@ export const Software: React.FC = () => {
         </div>
       ))}
     </div>
+    </>
   );
 };
 
