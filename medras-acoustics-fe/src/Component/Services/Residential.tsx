@@ -16,14 +16,28 @@ export const Residential = () => {
     const [popupContent, setPopupContent] = useState<{ title: string; image: string; description: string } | null>(null);
 
     const sections = [
-        { title: "Home Cinemas", image: "/images/acoustic-1.jpeg", description: "Detailed information about Home Cinemas." },
-        { title: "Home Entertainment", image: "/images/acoustic-1.jpeg", description: "Detailed information about Home Entertainment." }
+        { title: "Home Theater Acoustics", image: "/images/home-theater.png", description: "Detailed information about Home Theater Acoustics." },
+        { title: "Home Soundproofing",  image: "/images/home-sound-proof.png", description: "Detailed information about Home Soundproofing." },
+        { title: "Soundproof Doors",  image: "/images/home-door.png", description: "Detailed information about Soundproof Doors." },
+        { title: "Soundproof Windows", image: "/images/window-sound.png", description: "Detailed information about Soundproof Windows." },
+        { title: "Soundproof Walling",  image: "/images/wall-sound.png", description: "Detailed information about Soundproof Walling." },
+        { title: "Soundproof Window Partitioning",  image: "/images/window-partioning.png", description: "Detailed information about Soundproof Window Partitioning." },
+        { title: "Soundproof Flooring",  image: "/images/floor.png", description: "Detailed information about Soundproof Flooring." },
+        { title: "Residence",  image: "/images/residence.png", description: "Detailed information about Residential Soundproofing." },
+        { title: "Library",  image: "/images/librery.png", description: "Detailed information about Library Soundproofing." },
+        { title: "Home Office Soundproofing",  image: "/images/home-work.png", description: "Detailed information about Home Office Soundproofing." },
+        { title: "Nursery Soundproofing",  image: "/images/nursery.png",description: "Detailed information about Nursery Soundproofing." },
+        { title: "Gym & Home Workout Room Soundproofing", image: "/images/gym.png", description: "Detailed information about Gym & Home Workout Room Soundproofing." },
+        { title: "Garage & Workshop Soundproofing", image: "/images/garage.png", description: "Detailed information about Garage & Workshop Soundproofing." },
+        { title: "Basement Soundproofing",  image: "/images/basement.png", description: "Detailed information about Basement Soundproofing." },
+        { title: "Apartment Noise Reduction",  image: "/images/home-sound-2.jpg", description: "Detailed information about Apartment Noise Reduction." }
     ];
+    
 
     return (
         <>
           <div className="hero-section">
-        <img src={`${process.env.PUBLIC_URL}/images/contact.jpg`} alt="Contact" className="hero-image" />
+        <img src={`${process.env.PUBLIC_URL}/images/residential-bg.png`} alt="Contact" className="hero-image" />
         <div className="hero-content">
           <h1>Get in Touch</h1>
           <p>We’d love to hear from you! Reach out with any queries or concerns.</p>
@@ -38,7 +52,7 @@ export const Residential = () => {
                     <p>We offer top-quality residential acoustic solutions, soundproofing, and home theater installations to enhance your home experience.</p>
                 </div>
                 <div className="service-image">
-                    <img src="/images/acoustic-1.jpeg" alt="Residential Service" />
+                    <img src="/images/residential-service.png" alt="Residential Service" />
                 </div>
             </div>
 
