@@ -29,7 +29,7 @@ export const Home = () => {
 
             <div className="about-section">
                 <div className="about-image">
-                    <img src="/images/acoustic-1.jpeg" alt="About Us" />
+                    <img src="/images/home-page-2.jpg" alt="About Us" />
                 </div>
                 <div className="about-text">
                     <h2>ABOUT US</h2>

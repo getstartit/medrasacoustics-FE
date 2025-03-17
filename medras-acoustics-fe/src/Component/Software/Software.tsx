@@ -3,13 +3,13 @@ import React from "react";
 const softwareSections = [
   {
     title: "AFMG",
-    image: "/images/acoustic-1.jpeg",
+    image: "/images/afmg.png",
     content: "AFMG provides cutting-edge acoustic simulation and measurement software, helping engineers design better spaces with soundproofing and clarity.",
     imageLeft: true,
   },
   {
     title: "SOUND FLOW",
-    image: "/images/acoustic-1.jpeg",
+    image: "/images/sound-flow.jfif",
     content: "Sound Flow software helps in simulating the behavior of porous materials for acoustics, widely used for noise control and sound absorption research.",
     imageLeft: false,
   },
