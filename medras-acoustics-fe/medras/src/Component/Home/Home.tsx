@@ -33,6 +33,7 @@ const softwareSections = [
     },
   ];
 
+
 const serviceSections = [
     { title: "Music Studios", image: "/images/acoustic-1.jpeg", path: "/professional" },
     { title: "Film Mix Stages", image: "/images/acoustic-1.jpeg", path: "/professional" },
