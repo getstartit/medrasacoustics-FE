@@ -2,33 +2,64 @@ import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { sendQuery } from "../../API/contactAPI";
-
+import { Loader } from "../Loader/Loader";
 
 export const Contact = () => {
-  const userData: any = { name: "", email: "", message: "", mobileNumber: "", subject: "", address: "" }
-  const [formData, setFormData] = useState(userData);
+  const userData = {
+    name: "",
+    email: "",
+    message: "",
+    mobileNumber: "",
+    subject: "",
+    address: "",
+  };
+
+  const [formData, setFormData] = useState<any>(userData);
+  const [errors, setErrors] = useState<any>({});
+  const [loading, setLoading] = useState(false);
+
+  const validate = () => {
+    let newErrors: any = {};
+    if (!formData.name.trim()) newErrors.name = "Please fill this field";
+    if (!formData.email.trim()) newErrors.email = "Please fill this field";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) newErrors.email = "Invalid email format";
+    if (!formData.subject.trim()) newErrors.subject = "Please fill this field";
+    if (!formData.message.trim()) newErrors.message = "Please fill this field";
+    if (!formData.mobileNumber.trim()) newErrors.mobileNumber = "Please fill this field";
+    else if (!/^\d{10,}$/.test(formData.mobileNumber)) newErrors.mobileNumber = "Invalid phone number";
+    if (!formData.address.trim()) newErrors.address = "Please fill this field";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleChange = (e: any) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
+    setErrors({ ...errors, [e.target.id]: "" });
   };
 
   const handleSubmit = async (e: any) => {
-
     e.preventDefault();
+    if (!validate()) return;
+    setLoading(true);
     try {
       const send = await sendQuery(formData);
-      if (send?.status == 200) {
+      if (send?.status === 200) {
         toast.success("Review submitted successfully!", { autoClose: 2000 });
+        setFormData(userData);
       }
-    } catch (error: any) {
+    } catch (error) {
       toast.error("Failed to submit review. Please try again.", { autoClose: 2000 });
     } finally {
-      // setLoader(false);
-    }
-
+      setLoading(false); 
+  }
   };
 
+
   return (
+  <>
+  {loading && <Loader></Loader>}
+  <ToastContainer />
     <div className="contact-page">
 
       <div className="hero-section">
@@ -63,19 +94,27 @@ export const Contact = () => {
 
 
         <div className="query-form">
-          <h2 className="text-center">Submit Your Query</h2>
-          <form onSubmit={handleSubmit}>
-            <input type="text" id="name" name="name" placeholder="Enter Your Name" value={formData.name} onChange={handleChange} required />
-            <input type="email" id="email" name="email" placeholder="Enter Your Email" value={formData.email} onChange={handleChange} required />
-            <input type="subject" id="subject" name="subject" placeholder="Enter Subject" value={formData.subject} onChange={handleChange} required />
-            <textarea name="message" id="message" placeholder="Enter Your Message" value={formData.message} onChange={handleChange} required></textarea>
-            <input type="mobileNumber" id="mobileNumber" name="mobileNumber" placeholder="Phone Number" value={formData.mobileNumber} onChange={handleChange} required />
-            <input type="address" id="address" name="address" placeholder="City & State" value={formData.address} onChange={handleChange} required />
-            <button type="submit">Submit</button>
-          </form>
-        </div>
+            <h2 className="text-center">Submit Your Query</h2>
+            <form onSubmit={handleSubmit}>
+              {Object.keys(userData).map((field) => (
+                <div key={field}>
+                  <input
+                    type={field === "email" ? "email" : field === "mobileNumber" ? "tel" : "text"}
+                    id={field}
+                    placeholder={`Enter ${field.replace(/([A-Z])/g, ' $1')}`}
+                    value={formData[field]}
+                    onChange={handleChange}
+                    className={errors[field] ? "error-input" : ""}
+                  />
+                  {errors[field] && <p className="error-text">{errors[field]}</p>}
+                </div>
+              ))}
+              <button type="submit">Submit</button>
+            </form>
+          </div>
       </div>
     </div>
+    </>
   );
 };
 

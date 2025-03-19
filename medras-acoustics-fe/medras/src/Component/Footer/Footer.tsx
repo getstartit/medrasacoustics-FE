@@ -37,10 +37,11 @@ export const Footer = () => {
       <div className="footer-social">
         {[
           { href: "https://facebook.com", icon: "fab fa-facebook-f", label: "Facebook" },
+          { href: "https://jeromedj@madrasacoustics.com", icon: "fab fa-mail", label: "Gmail" },
           { href: "https://instagram.com", icon: "fab fa-instagram", label: "Instagram" },
           { href: "https://twitter.com", icon: "fab fa-twitter", label: "Twitter" },
-          { href: "https://wa.me/1234567890", icon: "fab fa-whatsapp", label: "WhatsApp" },
-          { href: "tel:+1234567890", icon: "fas fa-phone", label: "Phone" },
+          { href: "https://wa.me/918248365067", icon: "fab fa-whatsapp", label: "WhatsApp" },
+          { href: "tel:+918248365067", icon: "fas fa-phone", label: "Phone" },
           { href: "https://goo.gl/maps/example", icon: "fas fa-map-marker-alt", label: "Location" },
         ].map(({ href, icon, label }) => (
           <a key={href} href={href} target="_blank" rel="noopener noreferrer" aria-label={label}>
