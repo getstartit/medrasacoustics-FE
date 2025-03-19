@@ -44,6 +44,7 @@ export const Home = () => {
     return (
         <>
          {/* Hero Section */}
+         
          <div className="home-section">
                 <div className="home-overlay">
                     <h1>Madras Acoustics - Experts in Soundproofing</h1>
