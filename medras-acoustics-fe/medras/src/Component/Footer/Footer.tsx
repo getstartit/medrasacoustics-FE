@@ -10,7 +10,7 @@ export const Footer = () => {
             alt="Medras Acoustics Logo"
             className="footer-logo"
           /> */}
-          <span className="footer-company-name">Medras Acoustics</span>
+          <span className="footer-company-name">Madras Acoustics</span>
         </div>
 
         {/* Center - Navigation Links */}
@@ -52,7 +52,7 @@ export const Footer = () => {
 
       {/* Copyright */}
       <div className="footer-copyright">
-        &copy; {new Date().getFullYear()} Medras Acoustics. All rights reserved.
+        &copy; {new Date().getFullYear()} Madras Acoustics. All rights reserved.
       </div>
     </footer>
   );
