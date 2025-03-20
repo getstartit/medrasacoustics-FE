@@ -1,13 +1,12 @@
 import React from "react";
 const teamMembers = [
-  { name: "John Doe", role: "CEO", image: "/images/acoustic-1.jpeg",about: "John is the CEO and visionary leader of our company." },
-  { name: "Jane Smith", role: "CTO", image: "/images/acoustic-1.jpeg",about: "John is the CEO and visionary leader of our company." },
-  { name: "Michael Brown", role: "Designer", image: "/images/acoustic-1.jpeg",about: "John is the CEO and visionary leader of our company." },
-  { name: "Emily Davis", role: "Developer", image: "/images/acoustic-1.jpeg",about: "John is the CEO and visionary leader of our company."},
-  { name: "David Wilson", role: "Marketing", image: "/images/acoustic-1.jpeg",about: "John is the CEO and visionary leader of our company."},
-  { name: "Sophia Lee", role: "HR Manager", image: "/images/acoustic-1.jpeg",about: "John is the CEO and visionary leader of our company." },
-  { name: "Chris Taylor", role: "Sales", image:"/images/acoustic-1.jpeg",about: "John is the CEO and visionary leader of our company." },
-  { name: "Anna Johnson", role: "Support", image: "/images/acoustic-1.jpeg",about: "John is the CEO and visionary leader of our company." },
+  { name: "Prasanna ", role: "Acoustics Advisor", image: "/images/prasanna.jpg",about: "Bringing years of expertise, Prasanna provides strategic guidance on acoustic design, ensuring top-tier sound quality in every project." },
+  { name: "Danish", role: "Chief Sound Engineer", image: "/images/danish.jpg",about: "Leading the sound engineering division, Danish specializes in advanced acoustic treatments, soundproofing, and system optimization for diverse spaces." },
+  { name: "Raju", role: "Senior Sound Engineer", image: "/images/raju.jpg",about: "With extensive experience in audio engineering, Raju focuses on designing and implementing high-performance acoustic solutions."},
+  { name: "Deepak", role: "Lead Technician & CAD Designer", image: "/images/deepak.jpg",about: "Deepak combines technical expertise with CAD design, creating precise blueprints and layouts for seamless acoustic execution."},
+  { name: "Jafrin Reena", role: "Administrative Manager", image: "/images/jafrin.jpg",about: "Overseeing operations and project coordination, Jafrin ensures smooth execution of all administrative and client management tasks" },
+  { name: "Lokesh Kannan", role: "Software Developer", image:"/images/acoustic-1.jpeg",about: "A skilled software developer, specializes in building robust and efficient applications" },
+  { name: "Vijayalakshmi", role: "Software Developer", image: "/images/acoustic-1.jpeg",about: "With a passion for software development, focuses on creating intuitive and high-performance applications." },
 ];
 
 export const Teams: React.FC = () => {
@@ -16,16 +15,16 @@ export const Teams: React.FC = () => {
     <>
     <div className="hero-section">
         <img src={`${process.env.PUBLIC_URL}/images/contact.jpg`} alt="Contact" className="hero-image" />
-        <div className="hero-content">
-          <h1>Get in Touch</h1>
-          <p>We’d love to hear from you! Reach out with any queries or concerns.</p>
+        <div className="team-content">
+        <h1>Meet the Minds Behind the Sound</h1>
+        <p>Our expert team delivers precision, innovation, and excellence in every sound. Reach out to collaborate with us!</p>
         </div>
       </div>
     <div className="teams-container">
       {/* About Us Section */}
       <div className="about-section">
         <div className="about-image">
-          <img src="/images/acoustic-1.jpeg" alt="About Us" />
+          <img src="/images/about-us-2.png" alt="About Us" />
         </div>
         <div className="about-text">
           <h2>ABOUT US</h2>
@@ -55,6 +54,7 @@ export const Teams: React.FC = () => {
                 {/* Back Side */}
                 <div className="flip-card-back">
                   <h5>{member.name}</h5>
+                  <br/>
                   <p className="flip-role">{member.role}</p>
                   <p className="flip-about">{member.about}</p>
                 </div>
