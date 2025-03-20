@@ -78,17 +78,23 @@ export const Contact = () => {
 
           {/* Contact Details */}
           <div className="contact-details">
+<<<<<<< HEAD
             <p><i className="fas fa-envelope contact-icon"></i><strong>Email:</strong> jeromedj@madrasacoustics.com</p>
             <p><i className="fas fa-phone-alt contact-icon"></i><strong>Phone:</strong> +91 82483 65067</p>
+=======
+            <p><i className="fas fa-envelope contact-icon"></i><strong>Email:</strong>jeromedj@madrasacoustics.com</p>
+            <p><i className="fas fa-phone-alt contact-icon"></i><strong>Phone:</strong> +91 8248365067</p>
+>>>>>>> 557d3eb6a50f4cf07eef3ec2e46d5bcdda7dc095
             <p><i className="fas fa-map-marker-alt contact-icon"></i><strong>Address:</strong> 123 Main Street, New York, NY 10001</p>
           </div>
 
           {/* Social Media Icons Row */}
           <div className="contact-social-icons">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter"></i></a>
-            <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer"><i className="fab fa-whatsapp"></i></a>
+            <a href= "mailto:jeromedj@madrasacoustics.com" target="_blank" rel="noopener noreferrer"><i className="fas fa-envelope"></i></a>
+            <a href="https://instagram.com/madras_acoustics/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
+            <a href="https://wa.me/918248365067" target="_blank" rel="noopener noreferrer"><i className="fab fa-whatsapp"></i></a>
+            <a href="tel:+918248365067" target="_blank" rel="noopener noreferrer"><i className="fas fa-phone"></i></a>
           </div>
         </div>
 

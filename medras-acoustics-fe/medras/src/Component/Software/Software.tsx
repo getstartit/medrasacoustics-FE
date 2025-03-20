@@ -36,29 +36,30 @@ const softwareSections = [
 export const Software: React.FC = () => {
   return (
     <>
-    
-    <div className="hero-section">
+
+      <div className="hero-section">
         <img src={`${process.env.PUBLIC_URL}/images/contact.jpg`} alt="Contact" className="hero-image" />
-        <div className="hero-content">
-          <h1>Get in Touch</h1>
-          <p>We’d love to hear from you! Reach out with any queries or concerns.</p>
+        <div className="software-content">
+          <h1>Powering Sound with Precision</h1>
+          <p>We use cutting-edge software to design, analyze, and perfect acoustics, ensuring the highest quality in every project.</p>
+
         </div>
       </div>
-    <div className="software-container">
+      <div className="software-container">
 
-      {softwareSections.map((section, index) => (
-        <div key={index} className={`software-section ${section.imageLeft ? "left" : "right"}`}>
-          <div className="software-image">
-            <img src={section.image} alt={section.title} />
+        {softwareSections.map((section, index) => (
+          <div key={index} className={`software-section ${section.imageLeft ? "left" : "right"}`}>
+            <div className="software-image">
+              <img src={section.image} alt={section.title} />
+            </div>
+            <div className="software-text">
+              <h2>{section.title}</h2>
+              <div className="underline"></div>
+              <p>{section.content}</p>
+            </div>
           </div>
-          <div className="software-text">
-            <h2>{section.title}</h2>
-            <div className="underline"></div>
-            <p>{section.content}</p>
-          </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
     </>
   );
 };

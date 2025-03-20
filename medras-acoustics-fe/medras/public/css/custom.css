@@ -240,19 +240,31 @@ body {
 }
 
 .hero-content h1 {
-  font-size: 36px;
-  margin-bottom: 10px;
+  font-size: 42px;
+  margin-bottom: 12px;
   font-weight: bold;
   font-family: 'Cinzel', serif;
-  background: linear-gradient(#160f29, #246a73);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  letter-spacing: 1.5px;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Soft shadow for better visibility */
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
+
+
+
 
 .hero-content p {
   font-size: 18px;
+  font-style: italic;
+  font-family: 'Playfair Display', serif; /* Elegant serif font */
+  color: white; /* Pure white text */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Soft black shadow for contrast */
+  transform: skewX(-5deg); /* Slight slant for a stylish slide effect */
+  letter-spacing: 1.2px;
 }
+
+
+
 
 .contact-container {
   display: flex;
@@ -1314,4 +1326,75 @@ section h2 {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.team-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+.team-content h1 {
+  margin-top: 50px;
+  font-size: 35px;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+  color: #0f3d42; /* Even darker shade of #246a73 */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Stronger shadow for better contrast */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap; /* Prevents text from breaking into multiple lines */
+  overflow: hidden; /* Hides overflow if the text is too long */
+  text-overflow: ellipsis; /* Adds "..." if text overflows */
+}
+
+
+
+.team-content p {
+  font-size: 18px;
+  font-style: italic;
+  font-family: 'Playfair Display', serif; /* Elegant serif font */
+  color: white; /* Pure white text */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Soft black shadow for contrast */
+  transform: skewX(-5deg); /* Slight slant for a stylish slide effect */
+  letter-spacing: 1.2px;
+}
+
+
+.software-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+.software-content h1 {
+  margin-top: 50px;
+  font-size: 35px;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-family: 'Cinzel', serif;
+  color: #0f3d42; /* Even darker shade of #246a73 */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Stronger shadow for better contrast */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap; /* Prevents text from breaking into multiple lines */
+  overflow: hidden; /* Hides overflow if the text is too long */
+  text-overflow: ellipsis; /* Adds "..." if text overflows */
+}
+
+
+
+.software-content p {
+  font-size: 18px;
+  font-style: italic;
+  font-family: 'Playfair Display', serif; /* Elegant serif font */
+  color: white; /* Pure white text */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); /* Soft black shadow for contrast */
+  transform: skewX(-5deg); /* Slight slant for a stylish slide effect */
+  letter-spacing: 1.2px;
 }

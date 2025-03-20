@@ -37,9 +37,8 @@ export const Footer = () => {
       <div className="footer-social">
         {[
           { href: "https://facebook.com", icon: "fab fa-facebook-f", label: "Facebook" },
-          { href: "https://jeromedj@madrasacoustics.com", icon: "fab fa-mail", label: "Gmail" },
-          { href: "https://instagram.com", icon: "fab fa-instagram", label: "Instagram" },
-          { href: "https://twitter.com", icon: "fab fa-twitter", label: "Twitter" },
+          { href: "mailto:jeromedj@madrasacoustics.com", icon: "fas fa-envelope", label: "Email" },
+          { href: "https://instagram.com/madras_acoustics/", icon: "fab fa-instagram", label: "Instagram" },
           { href: "https://wa.me/918248365067", icon: "fab fa-whatsapp", label: "WhatsApp" },
           { href: "tel:+918248365067", icon: "fas fa-phone", label: "Phone" },
           { href: "https://goo.gl/maps/example", icon: "fas fa-map-marker-alt", label: "Location" },
